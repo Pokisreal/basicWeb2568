@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>sussy q</title>
+        <style>
+            body{
+                background-color:rgb(91, 17, 139);
+            }
+            h1 { color:rgb(192, 11, 177);
+            font-size: xx-large;
+            text-align: center;
+            
+        }
+        p {
+            color:rgb(20, 32, 134);
+            font-size: xx-large;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            font-weight: 500;
+           
+        }
+        img {
+            width: 30%;
+            background-color: rgb(11, 75, 158);
+            padding: 10%;
+            border-color: rgb(231, 162, 71);
+            border-width: 30px;
+            border-style: ridge;
+            border-radius: 10%;
+            margin: auto;
+            display: block; 
+        }
+        button{
+            font-size: xx-large;
+            background-color: aliceblue;
+            border-style: dotted;
+            
+        }
+
+        </style>
+    </head>
+
+    <body>
+        <h1 id = "title-text">ยินดีต้อนรับ</h1>
+        <!-- <h1 style="color:rgb(187, 255, 0); font-size: 60px;background-color: red;margin: 20px;">ยินดีต้อนรับ</h1> -->
+        <p>ขอต้อนรับสู่tralalero tralala</p>
+        <a href="https://www.w3schools.com/html/html_elements.asp">เรียนเพิ่มเติม</a>
+        <img id = "web-img" src = "https://preview.redd.it/just-found-out-that-tralalero-tralala-doesnt-mean-shark-v0-0nl5b44fqvve1.jpeg?width=640&crop=smart&auto=webp&s=f1629d0ad85b785504c9904ec3aff2ccf511e178" alr = "รูปยินดีต้อนรับ">
+        
+        <button onclick = "sayHello()">
+            คลิกที่นี้สิ
+        </button>
+
+        <script>
+            let myName = 'คุณคิวๆ'
+            function sayHello() {
+                alert("สวัสดีครับ" + " 0_0")
+                const textTitleElement = document.getElementById('title-text')
+                textTitleElement.innerText = 'ท่านผู้เจริญ'
+
+                const webImage = document.getElementById('web-img')
+                webImage.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbum-ewZPCqKuku95Mn_93VkxxFQWeyQHlLg&s"
+            }
+        
+        </script>
+    </body>
+</html>

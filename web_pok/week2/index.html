@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ทดสอบweb event</title>
+        <style>
+            input {
+                font-size: x-large;
+                border-radius: 4px;
+                border-color: crimson;
+                font-style: oblique;
+                border-width: 7px;
+                height: 40px;
+                width: auto;
+            }
+            h2{
+                font-size: xx-large;
+                
+            }
+            select{
+                font-size: 50px;
+                padding: 10px;
+                border-radius: 10px;
+                border-color: navy;
+                border-width: 4px;
+            }
+        </style>
+    </head>
+                                                                                            <!-- การบ้านให้เขียนinputทุกtype!!!-->
+    <body> 
+        <h2>ทดสอบการอ่านชื่อจาก input</h2>
+        <p id = "showMsg">อ่านข้อความ: </p>
+        <input id = "msgInput" placeholder="กรุณากรอกข้อความ" type="text"> <!-- type คือประเภทของข้อความ-->
+
+        <h2>ทดสอบการเลือกเเบบ Select</h2>
+        <p id = "selectInput">อ่านข้อความ: </p>
+        <select id = "showSelectMessage">
+            <option>โปรดเลือกตัวเลือก</option>
+            <option>ตัวเลือกที่1</option>
+            <option>ตัวเลือกที่2</option>
+            <option>ตัวเลือกที่3</option>
+            <option>ตัวเลือกที่4</option>
+
+        </select>
+
+        <script>
+            const messageInputElement = document.getElementById('msgInput')
+            console.log(messageInputElement)
+            messageInputElement.addEventListener("input", function(){
+                const msg = this.value
+                const showMsgElement = document.getElementById("showMsg")
+                showMsgElement.innerText = 'ข้อความที่อ่านได้: ' + msg
+                
+            })
+
+            const messageSelectInputElement = document.getElementById('showSelectMessage')
+            messageSelectInputElement.addEventListener("input", function(){
+                const msg = this.value
+                const showMsgElement = document.getElementById("selectInput")
+                showMsgElement.innerText = 'ข้อความที่อ่านได้: ' + msg
+            })
+        </script>
+    </body>
+</html>

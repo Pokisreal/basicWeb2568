@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>exam5</title>
+        <style>
+            select {
+                border-color: cadetblue;
+                border-width: auto;
+                font-size: large ;
+                border-width: 7px;
+                height: 60px;
+                border-radius: 10px;
+            }
+
+            input {
+                border-color: crimson;
+                border-width: auto;
+                font-size: x-large ;
+                border-width: 7px;
+                height: 60px;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>ชื่อ</h2>
+        <p id = "showMsg">อ่านข้อความ: </p>
+        <input id = "msgInput" placeholder="กรุณากรอกข้อความ" type="text">
+
+        <h2>ภาษาโปรเเกรมที่ชอบ</h2>
+        <p id = "selectInput">อ่านข้อความ: </p>
+        <select id = "showSelectMessage">
+            <option>โปรดเลือกตัวเลือก</option>
+            <option>JavaScript</option>
+            <option>Python</option>
+            <option>Go</option>
+            <option>C++</option>
+            <option>C#</option>
+            <option>Java</option>
+            <option>HTML</option>
+        <script>
+            const messageInputElement = document.getElementById('msgInput')
+            console.log(messageInputElement)
+            messageInputElement.addEventListener("input", function(){
+                const msg = this.value
+                const showMsgElement = document.getElementById("showMsg")
+                showMsgElement.innerText = 'ยินดีต้อนรับ: ' + msg
+            })
+
+            const messageSelectInputElement = document.getElementById('showSelectMessage')
+            messageSelectInputElement.addEventListener("input", function(){
+                const msg = this.value
+                const showMsgSelectElement = document.getElementById("selectInput")
+                showMsgSelectElement.innerText = 'คุณเลือกภาษา: ' + msg
+            })
+        </script>
+    </body>
+</html>
