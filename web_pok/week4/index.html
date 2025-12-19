@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="witdth=device-width, initial-scale=1.0">
+    <title>Week 4 - Project Overreview</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div>
+        <div>
+            <h1>Week4 - Project Overreview</h1>
+            <h1 id ="greeting"></h1>
+        </div>
+        <div>
+            <button onclick="showInfo()">เเสดงข้อมูลผู้ใช้</button>
+            <button onclick="window.location.reload()">รีโหลด</button>
+            <button onclick="openNewTab()">เปิดหน้าต่างใหม่</button>
+        </div>
+    </div>
+    <script>
+        window.alert(screen.height)
+        function openNewTab() {
+            window.open("https://www.kaggle.com/")
+        }
+        function showInfo() {
+            const userAgent = navigator.userAgent;
+            const language = navigator.language;
+            const witdth = navigator.witdth;
+            const height = navigator.height;
+            alert(`ข้อมูลผู้ใช้:\nUser Agent: ${userAgent}\nLanguage: ${language}\nScreen Width: ${witdth}\nScreen Height: ${height}`)
+            
+        }
+        const userName = window.prompt("กรุณาใส่อายุ:");
+        if (userName) {
+            document.getElementById("greeting").innerText = `สวัสดีคุณ ${userName}`
+        }
+    </script>
+</body>
+    
+</html>
